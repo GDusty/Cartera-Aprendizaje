@@ -1,5 +1,9 @@
-import models.inversores as inversores1
+import models.inversor as inversor
+import models.cartera as Cartera
+import models.stock as Stock
 
 if __name__ == '__main__':
-    print(inversores1.patata)
-    print(inversores1.variable)
+    print(inversor)
+    print(Cartera)
+    print(Stock)
+
