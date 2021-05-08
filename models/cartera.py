@@ -10,3 +10,7 @@ class Cartera:
     @property
     def valor(self):
         return None
+
+    def __init__(self, nombre, fondos):
+        self.nombre = nombre
+        self.fondos = fondos

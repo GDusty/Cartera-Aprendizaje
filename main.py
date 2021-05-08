@@ -1,9 +1,9 @@
-import models.inversor as inversor
-import models.cartera as Cartera
-import models.stock as Stock
+from models.inversor import Inversor
+from models.cartera import Cartera
+from models.stock import Stock
 
 if __name__ == '__main__':
-    print(inversor)
-    print(Cartera)
-    print(Stock)
-
+    yo = Inversor(nombre='Luis', apellido='Galdeano')
+    IICs = Cartera(nombre='Voy a ser rico', fondos= 10000)
+    print(yo.nombre)
+    print(yo.apellido)
