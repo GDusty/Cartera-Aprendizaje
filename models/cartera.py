@@ -1,8 +1,8 @@
 class Cartera:
     """
-    Aqúí es donde vas a introducir las carteras que tienen los diferentes inversores
-    """
+c    """
 
+    id = 0
     nombre = None
     fondos = 0.00
     stock = []
@@ -11,6 +11,13 @@ class Cartera:
     def valor(self):
         return None
 
-    def __init__(self, nombre, fondos):
+    def __init__(self, id, nombre, fondos):
+        self.id = id
         self.nombre = nombre
         self.fondos = fondos
+
+    def __str__(self):
+        return f'{self.id} - {self.nombre} - {self.fondos}'
+
+    def __repr__(self):
+        return str(self)
