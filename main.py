@@ -9,22 +9,33 @@ if __name__ == '__main__':
     inversor_actual_dni = input('Introduce tu DNI: ').upper()
     if inversor_actual := dict_inversores.get(inversor_actual_dni, False):
         print(f'Bienvenido {inversor_actual}')
+        print(f'Actualmente tienes las siguientes carteras: {inversor_actual.carteras}')
     else:
         print('Registrate')
         inversor_actual_nombre = input('Introduce tu nombre: ')
         inversor_actual_apellidos = input('Intrudocue tus apellidos: ')
-        dict_inversores[inversor_actual_dni] = Inversor(inversor_actual_dni, inversor_actual_nombre, inversor_actual_apellidos)
+        dict_inversores[inversor_actual_dni] = Inversor(inversor_actual_dni, inversor_actual_nombre,
+                                                        inversor_actual_apellidos)
 
-    print(f'Actualmente tienes las siguientes carteras: {inversor_actual.carteras}')
+    opciones = False
 
-    print('Opciones disponibles')
-    print('1 - seleccionar cartera')
-    print('2 - Crear cartera')
-    print('3 - Salir')
+    while not opciones:
 
-    seleccion = input('¿Que opción elige?: ')
+        print('Opciones disponibles')
+        print('1 - seleccionar cartera')
+        print('2 - Crear cartera')
+        print('3 - Salir')
 
-    print(seleccion)
+        seleccion = int(input('¿Que opción elige?: '))
 
+        if seleccion == 1:
+            pass
+        elif seleccion == 2:
+            pass
+        elif seleccion == 3:
+            print(f'Gracias por invertir con nosotros {inversor_actual.nombre}')
+            opciones = True
+            guardado(dict_inversores)
+        else:
+            print('Esa opción no está disponible, intentalo de nuevo.')
 
-    guardado(dict_inversores)

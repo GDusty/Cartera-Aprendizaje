@@ -1,6 +1,6 @@
 class Cartera:
     """
-c    """
+    """
 
     id = 0
     nombre = None
